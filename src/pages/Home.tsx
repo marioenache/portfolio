@@ -104,7 +104,7 @@ const Home: React.FC = () => {
           {showBio && (
             <div className="fade-in" style={{ animationDuration: '0.4s' }}>
               <TerminalText
-                text="Hey, I’m Mario Enache, a 20-year-old guy who started learning Unix-like systems since childhood when I turned an broken screen laptop into an Ubuntu server!"
+                text="Hey, I’m Mario Enache, a 20-year-old guy who started learning Unix-like systems since childhood when I turned a broken screen laptop into an Ubuntu server!"
                 delay={100}
                 typingSpeed={9}
               />
