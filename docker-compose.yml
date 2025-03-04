@@ -1,18 +1,16 @@
-version: '3.8'
+version: '3.1'
 
 services:
-  terminal-portfolio:
+  portfolio:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: terminal-portfolio
     ports:
-      - "3000:80"
+      - "127.0.0.1:3000:80"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./nginx/sites-available/terminal-portfolio.conf:/etc/nginx/conf.d/default.conf
     networks:
       - portfolio-network
 
@@ -20,4 +18,7 @@ networks:
   portfolio-network:
     driver: bridge
 
-// it won't run unless you create the Dockerfile first :)
+  volumes:
+    portfolio:
+
+# it won't work unless you create a Dockerfile for it :)
