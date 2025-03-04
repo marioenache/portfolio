@@ -4,32 +4,32 @@ import TerminalText from '../components/TerminalText';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      name: "Linux Systems Administration",
-      skills: ["System Performance Monitoring", "Resource Management", "Process Monitoring", "Systemd Service Management", "LVM Storage Management", "Kernel Management"]
+      name: "Systems & Databases",
+      skills: ["GNU", "Linux Fundamentals", "MariaDB / MySQL", "KVM VM's", "LXC Containers", "Phpmyadmin"]
     },
     {
-      name: "Network Security & Management",
-      skills: ["Firewall Configuration", "Intrusion Prevention", "SSH Hardening", "VPN Implementation", "Certificate Management", "Network Traffic Analysis"]
+      name: "Networking",
+      skills: ["Iptables", "UFW", "Fail2ban", "OpenVPN", "Netstat", "Nmap"]
     },
     {
       name: "Web Infrastructure",
-      skills: ["Reverse Proxy Configuration", "Web Server Administration", "Load Balancing", "Virtual Hosts", "HTTP/HTTPS Configuration", "High Availability Setup"]
+      skills: ["Nginx", "Httpd (Apache)", "Let's encrypt", "DNS Management", "Wordpress", "WHMCS"]
     },
     {
       name: "Cloud Platforms",
-      skills: ["AWS", "Azure", "GCP", "Oracle Cloud", "Infrastructure as Code", "Cloud Security"]
+      skills: ["AWS", "Azure", "GCP", "Oracle Cloud", "OVH", "Hetzner"]
     },
     {
       name: "Containerization & Virtualization",
-      skills: ["Docker", "Docker Compose", "Kubernetes", "Container Orchestration", "Proxmox", "Virtual Machine Management"]
+      skills: ["Docker", "Docker-compose", "K3S", "SolusVM", "Proxmox VE", "VirtFusion"]
     },
     {
       name: "Monitoring & Observability",
-      skills: ["Prometheus", "Grafana", "Metrics Collection", "Alert Management", "Performance Dashboards", "Log Analysis"]
+      skills: ["Prometheus", "Grafana", "Zabbix", "UptimeRobot", "btop / glances", "InfluxDB"]
     },
     {
-      name: "Network Infrastructure",
-      skills: ["Network Interface Configuration", "IP Management", "Routing", "Network Troubleshooting", "Bandwidth Optimization", "DNS Configuration"]
+      name: "Protocols",
+      skills: ["NTP", "SSH", "SMTP", "FTP / SFTP", "ICMP", "Telnet"]
     }
   ];
 

@@ -34,10 +34,10 @@ const Home: React.FC = () => {
 
   const executeCommand = (command: string) => {
     if (isExecuting) return;
-    
+
     setIsExecuting(true);
     setCommandInput(command);
-    
+
     setTimeout(() => {
       switch (command) {
         case 'cd /experience':
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           setShowCommands(false);
           setCommandInput('');
           setIsExecuting(false);
-          
+
           // Restart animations with a slight delay
           setTimeout(() => {
             setShowWelcome(true);
@@ -81,40 +81,40 @@ const Home: React.FC = () => {
     <div className="space-y-4">
       {showWelcome && (
         <div className="fade-in" style={{ animationDuration: '0.4s' }}>
-          <TerminalText 
-            text="uname -a" 
+          <TerminalText
+            text="uname -a"
             isCommand={true}
             typingSpeed={10}
           />
         </div>
       )}
-      
+
       {showIntro && (
         <div className="mt-4 space-y-3 fade-in" style={{ animationDuration: '0.4s' }}>
           <div className="flex items-center">
             <Terminal className="text-terminal-accent mr-2" size={24} />
-            <TerminalText 
-              text="Mario Enache | Linux SysAdmin" 
+            <TerminalText
+              text="Mario Enache | Linux SysAdmin"
               className="text-xl md:text-2xl font-bold text-terminal-accent"
               delay={100}
               typingSpeed={15}
             />
           </div>
-          
+
           {showBio && (
             <div className="fade-in" style={{ animationDuration: '0.4s' }}>
-              <TerminalText 
-                text="I'm a Linux systems administrator with expertise in server management, network infrastructure, and security implementation."
+              <TerminalText
+                text="Hey, I’m Mario Enache, a 20-year-old guy who started learning Unix-like systems since childhood when I turned an broken screen laptop into an Ubuntu server!"
                 delay={100}
-                typingSpeed={8}
+                typingSpeed={9}
               />
             </div>
           )}
-          
+
           {showNav && (
             <div className="fade-in" style={{ animationDuration: '0.4s' }}>
-              <TerminalText 
-                text="Navigate through the menu to explore my technical skills and contact information."
+              <TerminalText
+                text="I also do web design for small businesses and content creators. Feel free to navigate and check my work using the buttons below!"
                 delay={100}
                 typingSpeed={5}
               />
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
           )}
         </div>
       )}
-      
+
       {showPrompt && (
         <div className="mt-6 flex items-center text-terminal-accent fade-in" style={{ animationDuration: '0.4s' }}>
           <ChevronRight size={16} />
@@ -134,68 +134,68 @@ const Home: React.FC = () => {
 
       {showCommands && (
         <div className="mt-6 p-3 md:p-4 border border-gray-800 rounded-md bg-terminal-darkGray fade-in" style={{ animationDuration: '0.5s' }}>
-          <TerminalText 
-            text="Available commands:" 
+          <TerminalText
+            text="Available commands:"
             className="text-terminal-accent font-semibold"
             delay={100}
             typingSpeed={8}
           />
           <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div 
+            <div
               className="flex items-center cursor-pointer hover:bg-terminal-mediumGray p-1 rounded transition-colors command-button"
               onClick={() => executeCommand('cd /experience')}
-              style={{ 
+              style={{
                 opacity: 0,
                 animation: 'fadeIn 0.4s ease-out forwards 150ms'
               }}
             >
               <span className="text-terminal-accent mr-2">→</span>
-              <TerminalText 
+              <TerminalText
                 text="cd /experience"
                 delay={150}
                 typingSpeed={5}
               />
             </div>
-            <div 
+            <div
               className="flex items-center cursor-pointer hover:bg-terminal-mediumGray p-1 rounded transition-colors command-button"
               onClick={() => executeCommand('cd /skills')}
-              style={{ 
+              style={{
                 opacity: 0,
                 animation: 'fadeIn 0.4s ease-out forwards 300ms'
               }}
             >
               <span className="text-terminal-accent mr-2">→</span>
-              <TerminalText 
+              <TerminalText
                 text="cd /skills"
                 delay={300}
                 typingSpeed={5}
               />
             </div>
-            <div 
+            <div
               className="flex items-center cursor-pointer hover:bg-terminal-mediumGray p-1 rounded transition-colors command-button"
               onClick={() => executeCommand('cd /contact')}
-              style={{ 
+              style={{
                 opacity: 0,
                 animation: 'fadeIn 0.4s ease-out forwards 450ms'
               }}
             >
               <span className="text-terminal-accent mr-2">→</span>
-              <TerminalText 
+              <TerminalText
                 text="cd /contact"
                 delay={450}
                 typingSpeed={5}
               />
             </div>
-            <div 
+            <div
               className="flex items-center cursor-pointer hover:bg-terminal-mediumGray p-1 rounded transition-colors command-button"
               onClick={() => executeCommand('clear')}
-              style={{ 
+              style={{
                 opacity: 0,
                 animation: 'fadeIn 0.4s ease-out forwards 600ms'
               }}
             >
               <span className="text-terminal-accent mr-2">→</span>
-              <TerminalText 
+              <TerminalText
                 text="clear"
                 delay={600}
                 typingSpeed={5}
